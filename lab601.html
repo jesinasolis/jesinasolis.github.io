@@ -1,63 +1,162 @@
 <!DOCTYPE HTML>
 <html>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script> 
-    $(document).ready(function(){
+  <head>
+    <title> My Lab 6 Web Page </title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #container {
+        width: 70%;
+        text-align: left;
+        margin: 5px auto;
+      }
+
+      #photo {
+        background-color: #FFC0CB;
+        margin-left: auto;
+        margin-right: 0;
+        float: right;
+        width: 300px;
+        padding: 20px;
+      }
+
+      #strawberry-filled-cheesecake {
+        height: 300px;
+        width: 300px;
+        border: 2px solid #ddd;
+        border-radius: 10px 10px;
+        padding: 20px;
+        display: block;
+        margin: auto;
+      }
+
+      p, td, li {
+        font-size: 16px;
+        font-family: Verdana;
+      }
+
+      h1, h2, h3 {
+        font-family: Verdana;
+        background-color: #FFF0F5;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:link {
+        background-color: #eeeefe;
+      }
+
+      a:visited {
+        background-color: #feeeee;
+      }
+
+      a:hover {
+        background-color: #FFF0F5;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        color: #333;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      #steps {
+        margin-top: 20px;
+      }
+
+      ol {
+        margin: 0;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script> 
+    $(docucment).ready(function(){
       
     });
-  </script>
-  
-  <head>
-    <title> My lab6 web page </title>
+    </script>
+
+
+    
   </head>
   <body>
-    <h1> My lab 6 web page Welcome! </h1>
-    <p> This is the 6th lab for GIS 3410, web mapping, from MSU Denver. </p>
-    <h3> My name is jesina, I'm currently a junior pursuing a bachelor's degree in Geology with a certificate in GIS. </h3>
-    <p> Here are the four things that I love the most: My family/friends, learning, the outdoors, and food/coffee </p>
-    <h6> One of my favorite easy recipes that I enjoy: Cheesecake-Stuffed Strawberries </h6>
-    <p> I discovered this recipe from TikTok but I was able to find a recipe from </p> <a href="https://www.allrecipes.com/recipe/236459/cheesecake-stuffed-strawberries/">allrecipes</a/a>.</p> 
-    <img src = "strawberry filled cheesecake.webp" />
-      <h4>Recipe</h4>
-    <table>
-      <tr>
-        <th>Ingredient</th>
-        <th>Quantity</th>
-      </tr>
-      <tr>
-        <td> package cream cheese, soften </td>
-        <td> 1 (8 ounce) </td>
-      </tr>
-      <tr>
-        <td> confectioner's sugar </td>
-        <td> 1/2 cup </td>
-      </tr>
-      <tr>
-        <td> Vanilla extract </td>
-        <td> 1/2 teaspoon </td>
-      </tr>
-      <tr>
-        <td> fresh Strawberries </td>
-        <td> 1 pint </td>
-      </tr>
-      <tr>
-        <td> Gramham crackers </td>
-        <td> 4 graham crackers </td>
-      </tr>
-      <tr>
-        <td> semi-sweet chocolate chips </td>
-        <td> 1/4 cup </td>
-        </tr>
-    </table>
+    <div id="container">
+      <h1> My Lab 6 Web Page Welcome! </h1>
+      <h2> This is the 6th lab for GIS 3410, Web Mapping, from MSU Denver. </h2>
+      <h3> My name is Jesina, I'm currently a junior pursuing a bachelor's degree in Geology with a certificate in GIS. </h3>
+      <p> Here are the four things that I love the most: My family/friends, learning, the outdoors, and food/coffee. </p>
+      <p> One of my favorite easy recipes that I enjoy: Cheesecake-Stuffed Strawberries </p>
+      <p> I discovered this recipe from TikTok but I was able to find a recipe from </p> 
+      <a href="https://www.allrecipes.com/recipe/236459/cheesecake-stuffed-strawberries/">allrecipes</a>.
 
-    <h4>Steps</h4>
-    <ol>
-      <li> First you want to prepare everything, for the strawberies wash them then hull and core the middle of the strawberry. Next crush up graham crackers by putting them in a bag or processing them. </li>
-      <li> Beat cream cheese, confectioners sugar, and vanilla extract together in a bowl until smooth. Put filling into a piping bag or resealable bag with a corner snipped off. </li>
-      <li> Fill cavities of cored strawberries with the filling. Dip-filled side of strawberries in the crushed graham crackers to coat </li>
-      <li> optional melt chocolate chips in a microwave safe bowl and drizzle on top of the filled strawberries </li>
-      <li> let chocolate hardened in refrigerator then enjoy! </li>
-   </ol>
+      <div id="photo">
+        <img id="strawberry-filled-cheesecake" src="strawberry filled cheesecake.webp" alt="Cheesecake stuffed strawberries" />
+        <p class="caption">Strawberry filled cheesecake</p>
+        <p class="caption">Photo by Allrecipes</p>
+      </div>
+
+      <div id="Recipe">
+        <h4>Recipe</h4>
+        <table>
+          <tr>
+            <th>Ingredient</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td>Package cream cheese, softened</td>
+            <td>1 (8 ounce)</td>
+          </tr>
+          <tr>
+            <td>Confectioner's sugar</td>
+            <td>1/2 cup</td>
+          </tr>
+          <tr>
+            <td>Vanilla extract</td>
+            <td>1/2 teaspoon</td>
+          </tr>
+          <tr>
+            <td>Fresh strawberries</td>
+            <td>1 pint</td>
+          </tr>
+          <tr>
+            <td>Graham crackers</td>
+            <td>4 graham crackers</td>
+          </tr>
+          <tr>
+            <td>Semi-sweet chocolate chips</td>
+            <td>1/4 cup</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="steps">
+        <h4>Steps</h4>
+        <ol>
+          <li>First, you want to prepare everything. For the strawberries, wash them, then hull and core the middle of the strawberry. Next, crush up graham crackers by putting them in a bag or processing them.</li>
+          <li>Beat cream cheese, confectioner's sugar, and vanilla extract together in a bowl until smooth. Put filling into a piping bag or resealable bag with a corner snipped off.</li>
+          <li>Fill cavities of cored strawberries with the filling. Dip the filled side of strawberries in the crushed graham crackers to coat them.</li>
+          <li>Optional: Melt chocolate chips in a microwave-safe bowl and drizzle on top of the filled strawberries.</li>
+          <li>Let the chocolate harden in the refrigerator, then enjoy!</li>
+        </ol>
+      </div>
+    </div>
   </body>
 </html>
