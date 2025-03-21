@@ -88,13 +88,23 @@
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script> 
-    $(docucment).ready(function(){
-      
+    <script>
+      $(document).ready( function() {
+      //putting my javascript code here
+        $("#showButton").click( function(){
+          console.log("someone clicked showButton.");
+          
+          $("img").show(); //"img" selects all images on the webpage
+        });
+        
+        $("#hideButton").click( function(){
+          console.log("someone clicked hideButton.");
+          
+          $("img").hide();
+        });
     });
+      
     </script>
-
-
     
   </head>
   <body>
