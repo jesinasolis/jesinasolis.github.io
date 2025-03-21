@@ -85,25 +85,50 @@
       ol {
         margin: 0;
       }
+
+      .caption {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .button-container {
+        margin-top: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #FFC0CB;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #FF69B4;
+      }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-      $(document).ready( function() {
-      //putting my javascript code here
-        $("#showButton").click( function(){
-          console.log("someone clicked showButton.");
-          
-          $("img").show(); //"img" selects all images on the webpage
+      $(document).ready(function() {
+        // Put the images visible initially
+        $("img").show();
+
+        // Show images on showButton click
+        $("#showButton").click(function() {
+          console.log("Someone clicked showButton.");
+          $("img").show();
         });
-        
-        $("#hideButton").click( function(){
-          console.log("someone clicked hideButton.");
-          
+
+        // Hide images on hideButton click
+        $("#hideButton").click(function() {
+          console.log("Someone clicked hideButton.");
           $("img").hide();
         });
-    });
-      
+      });
     </script>
     
   </head>
@@ -121,6 +146,12 @@
         <img id="strawberry-filled-cheesecake" src="strawberry filled cheesecake.webp" alt="Cheesecake stuffed strawberries" />
         <p class="caption">Strawberry filled cheesecake</p>
         <p class="caption">Photo by Allrecipes</p>
+      </div>
+
+      <!-- Adding Show/Hide Buttons -->
+      <div class="button-container">
+        <button id="showButton">Show Images</button>
+        <button id="hideButton">Hide Images</button>
       </div>
 
       <div id="Recipe">
