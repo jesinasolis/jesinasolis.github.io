@@ -129,14 +129,20 @@
           $("img").hide();
         });
 
-        // Change the text of the h2 tag
-        $("#changeTextButton").click(function() {
-          $("#container h2").text("Welcome to my Lab 6 Web Page - Updated!");
-        });
-
-        // Update the steps section with new HTML
+        // Update the recipe steps when the button is clicked
         $("#updateStepsButton").click(function() {
-          $("#steps").html("<h4>New Steps</h4><ol><li>New Step 1: Do this.</li><li>New Step 2: Do that.</li></ol>");
+          $("#steps").html(`
+            <h4>Updated Recipe Steps</h4>
+            <ol>
+              <li><strong>Step 1:</strong> Start by preparing the strawberries. Wash them thoroughly, hull them, and core the middle of each berry using a small spoon or strawberry huller. Set aside.</li>
+              <li><strong>Step 2:</strong> In a medium-sized mixing bowl, combine softened cream cheese, confectioner's sugar, and vanilla extract. Beat together until smooth and creamy.</li>
+              <li><strong>Step 3:</strong> Fill a piping bag or a resealable plastic bag (with the tip cut off) with the cream cheese mixture. Carefully pipe the filling into the center of each cored strawberry until full.</li>
+              <li><strong>Step 4:</strong> Crush the graham crackers into fine crumbs using a plastic bag or a food processor. Roll the filled strawberries in the graham cracker crumbs to coat them evenly.</li>
+              <li><strong>Step 5:</strong> If desired, melt semi-sweet chocolate chips in a microwave-safe bowl and drizzle the chocolate over the filled strawberries for an extra indulgence.</li>
+              <li><strong>Step 6:</strong> Let the chocolate set by refrigerating the strawberries for 30 minutes. Once the chocolate is hardened, your cheesecake-stuffed strawberries are ready to enjoy!</li>
+            </ol>
+            <p>Tip: For an extra touch, sprinkle some mini chocolate chips or any other topping you might enjoy on top of the strawberries!</p>
+          `);
         });
       });
     </script>
@@ -161,7 +167,6 @@
       <div class="button-container">
         <button id="showButton">Show Images</button>
         <button id="hideButton">Hide Images</button>
-        <button id="changeTextButton">Change Welcome Text</button>
         <button id="updateStepsButton">Update Recipe Steps</button>
       </div>
 
