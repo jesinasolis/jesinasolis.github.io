@@ -128,9 +128,18 @@
           console.log("Someone clicked hideButton.");
           $("img").hide();
         });
+
+        // Change the text of the h2 tag
+        $("#changeTextButton").click(function() {
+          $("#container h2").text("Welcome to my Lab 6 Web Page - Updated!");
+        });
+
+        // Update the steps section with new HTML
+        $("#updateStepsButton").click(function() {
+          $("#steps").html("<h4>New Steps</h4><ol><li>New Step 1: Do this.</li><li>New Step 2: Do that.</li></ol>");
+        });
       });
     </script>
-    
   </head>
   <body>
     <div id="container">
@@ -152,6 +161,8 @@
       <div class="button-container">
         <button id="showButton">Show Images</button>
         <button id="hideButton">Hide Images</button>
+        <button id="changeTextButton">Change Welcome Text</button>
+        <button id="updateStepsButton">Update Recipe Steps</button>
       </div>
 
       <div id="Recipe">
