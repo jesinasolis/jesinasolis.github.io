@@ -62,12 +62,15 @@
                     } else if (! word.includes(letter)) {
 
                       // reduce the number of remaining tries by 1
-                      tried - tried - 1;
+                      tried = tried - 1;
+                      $("#guesses").text("mistakes, left: " + tried)
 
 
                       // are they out of tries? then they lost!
-
-                    
+                      if (tries < 1)  {
+                        gamelost = true;
+                        $("#info").text("Sorry, you're out of guesses, you LOSE!");
+                      }
                     
                     // otherwise, put a line through it and
                     // add it to the found letters
@@ -78,14 +81,33 @@
                       // with the letter that was clicked on
                       // replace the blanks with letter in blank
                       // and replace the letters with blanks in word
+                      while (word.includes(letter))  {
+                        index = word.indexOf(letter);
+                        console.log("index of word is " + index);
+                        word = word.substring(0, index) + " " + word.substring((index + 1));
+                        blank = blank.substring(0, index) + letter + blank.substring((index + 1));
+
+                        $("#word").text(blank);
+                        console.log("word is ", word);
+                        console.log("blank is ", blank);
+                      }
+                      
+                    
 
                      
                       // check if the player has won the game
+                      if (!blank.includes("-")) {
+                        gameWon = true;
+                        $("#info").text(" You WON! Great Job");
+                      }
 
 
                     }
 
                     // add the letter to letters already tried
+                    triedLetters = triedLetters + letter;
+                    console.log("triedLetters is", triedLetters);
+                    console.log("word is", word)
 
                   }
               });
