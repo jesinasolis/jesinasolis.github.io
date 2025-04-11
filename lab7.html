@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My lab 7 web page</title> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <style>
+      #map { height: 180px; }
+      body {width: 99%;
+           background-color: #f7f7ed;}
+      #page {
+        max-width: 960px;
+        text-align: center;
+        margin: auto;
+        padding: 10px, auto;
+        font-family: times, serif;
+        }
+      p {font-size: 16px;}
+    </style>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+     </head>
+  <body>
+    <div id ="page">
+      <h1>Map of my local area</h1>
+      <p>Here are some of my favorite spots I like to go to s</p>
+      <div id="map"></div>
+    </div>
+    <script>
+      var map = L.map('map').setView([38.874, -105.03], 14);
+      
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+    
+  </body>
+</html>
