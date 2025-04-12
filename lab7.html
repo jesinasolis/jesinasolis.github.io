@@ -52,25 +52,6 @@
         radius: 150
       }).addTo(map);
 
-      // Polygon near the area
-      var polygon = L.polygon([
-        [39.8725, -105.034],
-        [39.8730, -105.036],
-        [39.8720, -105.037],
-        [39.8715, -105.034]
-      ]).addTo(map);
-
-      // Polyline simulating a path/sidewalk
-      var polyline = L.polyline([
-        [39.871573, -105.040085],
-        [39.872, -105.038],
-        [39.8725, -105.0365],
-        [39.873, -105.035]
-      ], {
-        color: 'green',
-        weight: 4
-      }).addTo(map);
-
       // Popups with headings
       marker2.bindPopup("<h3>Dog Walking Spot</h3><p>This is where I walk my dog.</p>");
       marker3.bindPopup("<h3>Playground Area</h3><p>There are fun playgrounds and even a splash pad!</p>");
