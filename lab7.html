@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My lab 7 web page</title> 
+    <title>My Lab 7 Web Page</title> 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
     <style>
-      #map { height: 400px; } /* Increased height so the map is more visible */
+      #map { height: 400px; } /* More visible map */
       body {
         width: 99%;
         background-color: #f7f7ed;
@@ -21,13 +21,13 @@
       p { font-size: 16px; }
     </style>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
   </head>
 
   <body>
     <div id="page">
-      <h1>Map of my local area</h1>
+      <h1>Map of My Local Area</h1>
       <p>Here are some of my favorite spots I like to go to</p>
       <div id="map"></div>
     </div>
@@ -40,48 +40,32 @@
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       }).addTo(map);
 
-      // Corrected marker variable names (no spaces or numbers first)
+      // Markers
       var marker2 = L.marker([39.874027, -105.031481]).addTo(map);
       var marker3 = L.marker([39.871573, -105.040085]).addTo(map);
 
-      // Corrected circle coordinates
-      var circle = L.circle([39.8735, -105.036], {
+      // Circle over marker2
+      var circle = L.circle([39.874027, -105.031481], {
         color: 'red',
         fillColor: '#f03',
         fillOpacity: 0.5,
-        radius: 200
+        radius: 150
       }).addTo(map);
 
-      // Added polygon example coordinates
-      var polygon = L.polygon([
-        [39.873, -105.032],
-        [39.872, -105.037],
-        [39.874, -105.038]
-      ]).addTo(map);
+      // Popups with headings
+      marker2.bindPopup("<h3>Dog Walking Spot</h3><p>This is where I walk my dog.</p>");
+      marker3.bindPopup("<h3>Playground Area</h3><p>There are fun playgrounds and even a splash pad!</p>");
+      circle.bindPopup("<h3>Scenic Park</h3><p>This park has amazing mountain views.</p>");
+      polygon.bindPopup("<h3>Favorite Park</h3><p>This is another park near me that I like to go to.</p>");
+      polyline.bindPopup("<h3>Walking Path</h3><p>This is one of the paths I usually walk along.</p>");
 
-      // Added polyline coordinates and styling
-      var polyline = L.polyline([
-        [39.870, -105.030],
-        [39.871, -105.033],
-        [39.873, -105.035]
-      ], {
-        color: 'red',
-        weight: 5
-      }).addTo(map);
-
-      // Popups
-      marker2.bindPopup("This is where I walk my dog");
-      circle.bindPopup("This park has amazing mountain views.");
-      polygon.bindPopup("This is another park near me that I like to go to");
-      marker3.bindPopup("There are fun playgrounds and even a splash pad/water features!");
-
-      // Click popup
+      // Click-to-popup feature
       var popup = L.popup();
 
       function onMapClick(e) {
         popup
           .setLatLng(e.latlng)
-          .setContent("You clicked the map at " + e.latlng.toString())
+          .setContent("<h3>Map Clicked</h3><p>You clicked the map at " + e.latlng.toString() + "</p>")
           .openOn(map);
       }
 
